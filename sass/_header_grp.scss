@@ -60,6 +60,18 @@
   }
 }
 
+//-------------------- Sticky Header --------------------//
+
+.sticky-header {
+  #header-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    //background-color: $header-sticky-bg;
+    box-shadow: 0 0 10px rgba($black,0.1);
+  }
+}
+
 //-------------------- Logo --------------------//
 
 #logo {
@@ -87,6 +99,12 @@
       max-height: 100%;
     }
   }
+
+  @include media-breakpoint-up(lg) {
+		@at-root .sticky-header-shrink #header-wrap #logo img {
+			height: 60px;
+		}
+	}
 }
 
 //-------------------- Primary Menu --------------------//

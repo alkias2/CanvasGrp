@@ -10710,6 +10710,13 @@ small, .small {
   }
 }
 
+.sticky-header #header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 #logo {
   position: relative;
   display: flex;
@@ -10731,6 +10738,11 @@ small, .small {
   #logo img {
     transition: height 0.4s ease, padding 0.4s ease, margin 0.4s ease, opacity 0.3s ease;
     max-height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .sticky-header-shrink #header-wrap #logo img {
+    height: 60px;
   }
 }
 
