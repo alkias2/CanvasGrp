@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="grp.css" rel="stylesheet" />
+    <!-- Fonts
+	============================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Document Wrapper
+============================================= -->
+    <div id="wrapper" class="clearfix">
+      <header id="header">
+        <div id="header-wrap">
+          
+            <div class="container">
+            <div class="header-row">
+              <!-- <div class="container-fluid position-relative"></div> -->
+              <div id="logo" class="mx-lg-auto col-auto flex-column order-lg-2 px-0">
+                <a class="navbar-brand mx-auto" href="#"><img src="images/logo.svg" alt="Logo" width="100px" /></a>
+              </div>
+
+              <div id="primary-menu-trigger">
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container">
+            <div class="header-row justify-content-lg-center header-border top-search-parent">
+              <!-- Primary Navigation
+                ============================================= -->
+              <nav class="primary-menu">
+                <ul class="menu-container justify-content-between">
+                  <li class="menu-item">
+                    <a class="menu-link" href="#"><div>Home</div></a>
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="#"><div>About</div></a>
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="#"><div>Galleries</div></a>
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="#"><div>Blog</div></a>
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="#"><div>Contact us</div></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" style="background-image: url('images/slider/2.jpg')">
+          <h1>Hero Title</h1>
+        </section>
+        <section class="section-image" style="background-image: url('images/slider/4.jpg')">
+          <h2>Section 2 Title</h2>
+        </section>
+        <section class="section-image" style="background-image: url('images/slider/3.jpg')">
+          <h2>Section 3 Title</h2>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Company Name</p>
+        <nav>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      const toggler = document.querySelector(".navbar-toggler");
+      const fullscreenMenu = document.querySelector(".fullscreen-menu");
+
+      toggler.addEventListener("click", () => {
+        fullscreenMenu.classList.toggle("show");
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

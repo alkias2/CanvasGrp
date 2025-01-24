@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            background: transparent;
+        }
+
+        .navbar {
+            justify-content: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            position: absolute;
+            right: 20px;
+        }
+
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            overflow: hidden;
+        }
+
+        .fullscreen-menu.show {
+            display: flex;
+        }
+
+        .fullscreen-menu a {
+            color: white;
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .hero {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .section-image {
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        footer a {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand mx-auto" href="#"><img src="images/logo.svg" alt="Canvas Logo"></a>
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="fullscreen-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" style="background-image: url('images/slider/2.jpg');">
+        <h1>Hero Title</h1>
+    </section>
+    <section class="section-image" style="background-image: url('images/slider/4.jpg');">
+        <h2>Section 2 Title</h2>
+    </section>
+    <section class="section-image" style="background-image: url('images/slider/3.jpg');">
+        <h2>Section 3 Title</h2>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Company Name</p>
+    <nav>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+    </nav>
+</footer>
+
+<script>
+    const toggler = document.querySelector('.navbar-toggler');
+    const fullscreenMenu = document.querySelector('.fullscreen-menu');
+
+    toggler.addEventListener('click', () => {
+        fullscreenMenu.classList.toggle('show');
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

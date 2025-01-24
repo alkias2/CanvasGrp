@@ -1,0 +1,97 @@
+/*sz overights*/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: black;
+}
+
+#header {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+}
+#header #logo {
+  z-index: 300;
+}
+
+.header-row.header-border {
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+@media (min-width: 992px) {
+  .sticky-header #header-wrap,
+  .dark #header-wrap {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.menu-link,
+.dark .menu-link {
+  font-family: "Alegreya", serif;
+  font-weight: 400 !important;
+  font-size: 1.2rem;
+  text-transform: unset;
+  color: #000;
+  background-image: linear-gradient(rgba(var(--themecolorrgba, 243, 152, 135), 0.3), rgba(var(--themecolorrgba, 243, 152, 135), 0.3));
+  background-repeat: no-repeat;
+  background-size: 0% 7px;
+  background-position: 0 58%;
+  transition: background-size 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#header-wrap {
+  background: transparent;
+}
+
+#slider {
+  min-height: 100vh !important;
+  margin-top: -173px;
+}
+
+.galleries .container {
+  height: 100%;
+}
+
+/* Styling for the Animated Title */
+.slider-caption h3.bounce-title {
+  display: inline-block;
+  cursor: pointer;
+  font-family: "Alegreya", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.slider-caption h3.bounce-title:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounce-slow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}/*# sourceMappingURL=custom.css.map */

@@ -1,0 +1,229 @@
+* {
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+dl, dt, dd, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  position: relative;
+  float: none;
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#header {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+#header-wrap {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  max-height: 100%;
+}
+#logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100px;
+}
+
+#primary-menu-trigger {
+  display: -ms-flex;
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 0.875rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.primary-menu {
+  display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.menu-container {
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-link {
+  font-family: "Alegreya", serif !important;
+  font-size: 20px;
+  text-transform: none;
+  display: block;
+  line-height: 22px;
+  padding: 39px 15px;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@media (min-width: 992px) {
+  #header,
+  #header-wrap {
+    border: 0;
+  }
+  #header-wrap {
+    position: fixed;
+    height: auto;
+    z-index: 299;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    transition: height 0.2s ease 0s, background-color 0.3s ease 0s;
+    backface-visibility: hidden;
+    will-change: left, top, transform;
+  }
+  .header-row {
+    position: initial;
+  }
+  .mx-lg-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  #primary-menu-trigger, #page-menu-trigger {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #primary-menu-trigger {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .primary-menu {
+    flex: 0 0 auto;
+    flex-grow: 0;
+    width: 50%;
+    opacity: 1;
+    transition: padding 0.4s ease, margin 0.4s ease, opacity 0.2s 0.2s ease;
+  }
+  .menu-container:not(.mobile-primary-menu) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .menu-link {
+    transition: margin 0.4s ease, padding 0.4s ease;
+  }
+}
+/* 
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            background: transparent;
+        }
+
+.navbar {
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-toggler {
+    position: absolute;
+    right: 20px;
+}
+
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.fullscreen-menu.show {
+    display: flex;
+}
+
+.fullscreen-menu a {
+    color: white;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+*/
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.section-image {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+footer a {
+  margin: 0 5px;
+}/*# sourceMappingURL=grp.css.map */
