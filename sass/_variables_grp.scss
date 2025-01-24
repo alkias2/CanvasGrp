@@ -1,0 +1,55 @@
+@import "bootstrap/_functions";
+@import "bootstrap/_variables";
+@import "bootstrap/_mixins";
+
+//-------------------- Base Colors --------------------//
+
+$theme-color:                   		#1ABC9C;
+$body-text-color:               		#000;
+
+$text-color:							#000; // #444
+$text-color-dark:						#EEE; // #EEE
+
+//-------------------- Line Height Variables --------------------//
+
+$line-height-base:              		1.5;
+$line-height-content:           		1.8;
+
+//-------------------- Utilities --------------------//
+
+// Font weights
+$font-weight-extralight: 				100;
+$font-weight-medium: 					500;
+$font-weight-semibold: 					600;
+$font-normal: 							normal;
+
+$text-sizes: (
+	xs: 0.875rem,
+	sm: 1rem,
+	md: 1.5rem,
+	lg: 2rem,
+	xl: calc(1rem + 2.25vw),
+	xxl: calc(1rem + 3.5vw)
+);
+
+//-------------------- Font Families --------------------//
+
+$body-font:                     		'Alegreya', serif;
+$heading-font:                  		'Alegreya', serif;
+$secondary-font:                		'Alegreya', serif;
+
+//-------------------- Header --------------------//
+
+$header-height:		                 	100px;
+$header-height-sm:						round($header-height / 1.6667); //60px
+$header-height-md:						round($header-height / 1.25); //80px
+$header-height-lg:						round($header-height * 1.2); //120px
+
+//-------------------- Primary Menu --------------------//
+
+$primary-menu-font:             		$heading-font;
+$primary-menu-font-weight:      		700;
+$primary-menu-font-size:        		0.8125rem;
+$primary-menu-font-tt:          		uppercase;
+$primary-menu-font-color:       		$text-color;  // Leave as a "$text-color" for auto bg contrast
+$primary-menu-font-spacing:     		1px;

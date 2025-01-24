@@ -169,9 +169,10 @@ window.scwEvents = window.scwEvents || {};
 		$header = $('#header'),
         $headerWrap = $('#header-wrap'),
         $headerWrapClone = '',
+		stickyShrink = $header.attr('data-sticky-shrink') || 'true',
         $primaryMenuTrigger = $("#primary-menu-trigger"),
         primaryMenu = $('.primary-menu'),
-        resizeTimer;;
+        resizeTimer;
 
     $(document).ready( SEMICOLON.documentOnReady.init );
 

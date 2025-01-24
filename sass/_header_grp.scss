@@ -1,0 +1,210 @@
+//-------------------- Header --------------------//
+#header {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  border-bottom: 1px solid #F5F5F5;
+
+  @include media-breakpoint-up(lg) {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    z-index: 199;
+  }
+
+  &-wrap {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      position: fixed;
+      height: auto;
+      z-index: 299;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+      transition: height .2s ease 0s, background-color .3s ease 0s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: left, top, transform;
+    }
+  }
+
+}
+
+.header-wrap-clone {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    height: 42px;
+
+    .header-size-sm .header-wrap-clone {
+      height: 61px;
+    }
+
+    .header-size-md .header-wrap-clone {
+      height: 81px;
+    }
+
+    .header-size-lg .header-wrap-clone {
+      height: 121px;
+    }
+  }
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(lg) {
+    position: initial;
+  }
+}
+
+//-------------------- Logo --------------------//
+
+#logo {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  max-height: 100%;
+
+  .mx-lg-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: 150px;
+
+    @include media-breakpoint-up(lg) {
+      -webkit-transition: height .4s ease, padding .4s ease, margin .4s ease, opacity .3s ease;
+      transition: height .4s ease, padding .4s ease, margin .4s ease, opacity .3s ease;
+      max-height: 100%;
+    }
+  }
+}
+
+//-------------------- Primary Menu --------------------//
+.primary-menu {
+  display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
+
+  // align-items: center;
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 auto;
+    flex-grow: 0;
+    width: 50%;
+    opacity: 1;
+    align-items: center;
+    transition: padding .4s ease, margin .4s ease, opacity .2s .2s ease;
+  }
+}
+
+#primary-menu-trigger,
+#page-menu-trigger {
+  display: -ms-flex;
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 0.875rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+#primary-menu-trigger {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  padding: 2px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: transform 250ms cubic-bezier(0.2, 0.6, 0.3, 1), width 250ms cubic-bezier(0.2, 0.6, 0.3, 1);
+    will-change: transform, width;
+  }
+
+  .line.first {
+    top: calc(33.33% - 0.5px);/* Start one-third down */    
+    left: 0;
+  }
+
+  .line.second {
+    top: calc(66.66% - 0.5px);/* Start two-thirds down */    
+    left: 0;
+  }
+
+  &.animate .line.first {
+    top: 50%; /* Move to the center */   
+    left: 50%;/* Center horizontally */    
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate to form part of the X */   
+  }
+
+  &.animate .line.second {
+    top: 50%;/* Move to the center */    
+    left: 50%;/* Center horizontally */    
+    transform: translate(-50%, -50%) rotate(-45deg);/* Rotate to form the other part of the X */    
+  }
+
+}
+
+.menu-container {
+  display: none;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  @include media-breakpoint-up(lg){
+    &:not(.mobile-primary-menu) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-link {
+  font-family: 'Alegreya', serif !important;
+  font-size: 20px;
+  text-transform: none;
+  display: block;
+  line-height: 22px;
+  padding: 10px 15px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0;
+  @include media-breakpoint-up(lg){
+    transition: margin .4s ease, padding .4s ease;
+  }
+}

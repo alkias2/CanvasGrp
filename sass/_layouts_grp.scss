@@ -1,0 +1,29 @@
+.d-block {
+    display: block !important;
+}
+
+.not-scroll{
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
+#wrapper {
+    position: relative;
+    float: none;
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.section-image {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
